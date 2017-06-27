@@ -1,28 +1,34 @@
+<!-- Import main-layout document from template.-->
+{% extends 'layout.html' %}
 
+<!--Title of Page.-->
+{% block title %}About Us {{ super() }}{% endblock %}
 
+<!--Content to be displayed in body of the document.-->
+{% block content %}
+  <section class="section-block">
+    <h1>What We Believe</h1>
+    <p>We believe that the only long term, true measure of a successful organization is uncompromised attention to the goals and objectives of our customers. We strive to attain that measure of success by:</p>
+    <ul>
+      <li>Giving full attention to complete, clear development and understanding of our clients' goals and objectives.</li>
+      <li>Utilizing our skills and experience to build working relationships that fulfill our clients' goals and objectives.</li>
+      <li>Maintaining a commitment to moral and ethical business principles.</li>
+    </ul>
 
-<section class="section-block">
-  <h1>What We Believe</h1>
-  <p>We believe that the only long term, true measure of a successful organization is uncompromised attention to the goals and objectives of our customers. We strive to attain that measure of success by:</p>
-  <ul>
-    <li>Giving full attention to complete, clear development and understanding of our clients' goals and objectives.</li>
-    <li>Utilizing our skills and experience to build working relationships that fulfill our clients' goals and objectives.</li>
-    <li>Maintaining a commitment to moral and ethical business principles.</li>
-  </ul>
+    <p>To stay on the cutting edge of air filtration technology, we maintain active involvement in various technical associations and organizations. Members of our staff serve on the technical committees to develop new filtration test standards and procedures incorporating the newest technology. We continually attend seminars and workshops to update our knowlege base on the latest techniques in air filtration theory, materials and equipment. We have developed personal relationships with leading experts throughout the air filtration industry who provide us firsthand knowlege of the most current air filter testing procedures, standards, and instrumentation.</p>
 
-  <p>To stay on the cutting edge of air filtration technology, we maintain active involvement in various technical associations and organizations. Members of our staff serve on the technical committees to develop new filtration test standards and procedures incorporating the newest technology. We continually attend seminars and workshops to update our knowlege base on the latest techniques in air filtration theory, materials and equipment. We have developed personal relationships with leading experts throughout the air filtration industry who provide us firsthand knowlege of the most current air filter testing procedures, standards, and instrumentation.</p>
+    <p>The bottom line for this approach to our business is to provide you with the very best in technical services on every job and every test we perform.</p>
+  </section>
 
-  <p>The bottom line for this approach to our business is to provide you with the very best in technical services on every job and every test we perform.</p>
-</section>
+  <section class="section-block">
+    <h1>Recognized Leader</h1>
+    <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
+  </section>
 
-<section class="section-block">
-  <h1>Recognized Leader</h1>
-  <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
-</section>
+  <section class="section-block">
+    <h1>Rely on the Industry's Foremost Experts</h1>
+    <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
+  </section>
 
-<section class="section-block">
-  <h1>Rely on the Industry's Foremost Experts</h1>
-  <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
-</section>
-
-<p>Learn more about the <a href="#!">Blue Heaven Crew</a></p>
+  <p>Learn more about the <a href="#!">Blue Heaven Crew</a></p>
+  {% endblock %}

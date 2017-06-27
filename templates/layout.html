@@ -3,45 +3,50 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}{% endblock title %}</title>
+
+    <!-- Title -->
+    <title>{% block title %}{% endblock title %} | BHT</title>
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}" />
-    {% block stylesheets %}{% endblock %}    
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}" />-->
+    {% block stylesheets %}{% endblock %}   
+
   </head>
   <body>
     <div id="wrapper">
 
-      <!-- Site Header -->
+      <!-- Site Header (Logo & Navigation) -->
       <div id="header">
+
         <!-- Site Logo -->
-        <a href="#!"><img src="img/logo.png" alt="Blue Heaven Tech Logo" class="logo" /></a>
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
 
         <!-- Site Navigation -->
         <button class="menu-button">Menu</button>
         <div class="nav-wrapper"> <!-- Allows for styling container in addition to menu itself -->
           <nav class="nav-menu clearfix">
             <ul>
-              <li class="nav-items"><a class="nav-links" href="#!">Home</a></li>
-              <li class="nav-items"><a class="nav-links" href="#!">About Us</a>
+              <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
+              <li class="nav-items"><a class="nav-links" href="{{ url_for('about_us') }}">About Us</a>
                 <ul class="sub-menu">
-                  <li class="nav-items"><a class="nav-links" href="#!">The Blue Heaven Crew</a></li>
+                  <li class="nav-items"><a class="nav-links" href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
                 </ul>
               </li>
-              <li class="nav-items"><a class="nav-links" href="#!">Environmental and Air Filtration Services</a>
+              <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">Environmental and Air Filtration Services</a>
                 <ul class="sub-menu">
                   <li class="nav-items"><a class="nav-links" href="#!">Air Filtration Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="#!">Environmental/Emissions Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="#!">Test Dusts</a></li>
+                  <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental/Emissions Testing</a></li>
+                  <li class="nav-items"><a class="nav-links" href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
                 </ul>
               </li>
-              <li class="nav-items"><a class="nav-links" href="#!">FAQ's</a></li>
-              <li class="nav-items"><a class="nav-links" href="#!">Contact Us</a></li>
+              <li class="nav-items"><a class="nav-links" href="{{ url_for('faqs') }}">FAQ's</a></li>
+              <li class="nav-items"><a class="nav-links" href="{{ url_for('contact_us') }}">Contact Us</a></li>
             </ul>
           </nav>
-        </div> <!-- end dropdown-container div -->
-        <!-- end Site Navigation -->
+        </div> <!-- end dropdown-navigation container div -->
       </div> <!-- end header div -->
       
 
@@ -50,8 +55,9 @@
 
       <!-- Content Area -->
       <div id="content">
-        {% block content%}{% endblock %}
+        {% block content %}{% endblock %}
       </div> <!-- end content div -->
+
     </div> <!-- end wrapper div -->
   </body>
   <footer>
@@ -61,8 +67,10 @@
     <p>502-357-0132</p>
     <p>info@blueheaventech.com</p>
   </footer>
+
   <!-- Javacript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{url_for('static', filename='js/navigation.js')}}"></script>
   {% block javascript %}{% endblock %}
+
 </html>

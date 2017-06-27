@@ -3,31 +3,45 @@ app = Flask(__name__)
 
 # Page Links
 @app.route('/')
-def index():
+def home():
     return render_template('index.html')
 
-@app.route('/about/')
+@app.route('/about-us/')
 def about_us():
     return render_template('about_us.html')
 
 @app.route('/news/')
-def air_filtration_news():
-    return render_template('air_filtration_news.html')
+def news():
+    return render_template('news.html')
 
 @app.route('/crew/')
-def blue_heaven_crew():
-    return render_template('blue_heaven_crew')
+def crew():
+    return render_template('crew.html')
 
 @app.route('/faqs/')
 def faqs():
-    return render_template('faqs')
+    return render_template('faqs.html')
 
 @app.route('/location/')
 def maps():
-    return render_template('maps')
+    return render_template('maps.html')
 
 @app.route('/services/')
-def services_offered():
-    return render_template('services_offered')
+def services():
+    return render_template('services.html')
+
+@app.route('/services/test-dusts/')
+def test_dusts():
+    return render_template('test_dusts.html')
+
+@app.route('/services/environmental-testing/')
+def environmental_testing():
+    return render_template('environmental_testing.html')
+
+@app.route('/contact-us/')
+def contact_us():
+    return render_template('contact_us.html')
+
+
 
 

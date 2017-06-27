@@ -1,69 +1,12 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Home</title>
-    <!-- Favicon -->
+<!-- Import main-layout document from template.-->
+{% extends 'layout.html' %}
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}" />
-    
-  </head>
-  <body>
-    <div id="wrapper">
+<!--Title of Page.-->
+{% block title %}Home {{ super() }}{% endblock %}
 
-      <!-- Site Header -->
-      <div id="header">
-        <!-- Site Logo -->
-        <a href="#!"><img src="img/logo.png" alt="Blue Heaven Tech Logo" class="logo" /></a>
+<!--Content to be displayed in body of the document.-->
+{% block content %}
+  <h1>Welcome to a New Website!</h1>
 
-        <!-- Site Navigation -->
-        <button class="menu-button">Menu</button>
-        <div class="nav-wrapper"> <!-- Allows for styling container in addition to menu itself -->
-          <nav class="nav-menu clearfix">
-            <ul>
-              <li class="nav-items"><a class="nav-links" href="#!">Home</a></li>
-              <li class="nav-items"><a class="nav-links" href="#!">About Us</a>
-                <ul class="sub-menu">
-                  <li class="nav-items"><a class="nav-links" href="#!">The Blue Heaven Crew</a></li>
-                </ul>
-              </li>
-              <li class="nav-items"><a class="nav-links" href="#!">Environmental and Air Filtration Services</a>
-                <ul class="sub-menu">
-                  <li class="nav-items"><a class="nav-links" href="#!">Air Filtration Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="#!">Environmental/Emissions Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="#!">Test Dusts</a></li>
-                </ul>
-              </li>
-              <li class="nav-items"><a class="nav-links" href="#!">FAQ's</a></li>
-              <li class="nav-items"><a class="nav-links" href="#!">Contact Us</a></li>
-            </ul>
-          </nav>
-        </div> <!-- end dropdown-container div -->
-        <!-- end Site Navigation -->
-      </div> <!-- end header div -->
-      
-
-      <!-- Slideshow for Desktop Layout -->
-      <div id="photo-gallery"></div>
-
-      <!-- Content Area -->
-      <div id="content">
-        <h1>Welcome to a New Website!</h1>
-
-        <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture. Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
-      </div> <!-- end content div -->
-    </div> <!-- end wrapper div -->
-  </body>
-  <footer>
-    <p>Copyright &copy; Blue Heaven Technologies 2017</p>
-    <p>2820 S. English Station Road</p>
-    <p>Louisville, KY 40299</p>
-    <p>502-357-0132</p>
-    <p>info@blueheaventech.com</p>
-  </footer>
-  <!-- Javacript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="{{url_for('static', filename='js/navigation.js')}}"></script>
-</html>
+  <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture. Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
+{% endblock %}

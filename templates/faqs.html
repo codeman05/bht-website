@@ -1,7 +1,14 @@
+<!-- Import main-layout document from template.-->
+{% extends 'layout.html' %}
 
+<!--Title of Page.-->
+{% block title %}FAQ's {{ super() }}{% endblock %}
 
-<p>Frequently Asked Questions:</p>
-<ul>
-  <li><a href="#!">What does the ASHRAE 52.2 entail?</a></li>
-  <li><a href="#!">Why does the efficiency vs particle size curve in the ASHRAE Standard 52.2 sometimes start turning back down at larger particle sizes?</a></li>
-</ul>
+<!--Content to be displayed in body of the document.-->
+{% block content %}
+  <p>Frequently Asked Questions:</p>
+  <ul>
+    <li><a href="#!">What does the ASHRAE 52.2 entail?</a></li>
+    <li><a href="#!">Why does the efficiency vs particle size curve in the ASHRAE Standard 52.2 sometimes start turning back down at larger particle sizes?</a></li>
+  </ul>
+{% endblock %}
