@@ -8,10 +8,11 @@
     <title>{% block title %}{% endblock title %} | BHT</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
     <!-- Stylesheets -->
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidr-2.2.1/jquery.sidr.dark.css') }}">
     {% block stylesheets %}{% endblock %}   
 
   </head>
@@ -26,7 +27,7 @@
 
         <!-- Site Navigation -->
         <button class="menu-button">Menu</button>
-        <div class="nav-wrapper"> <!-- Allows for styling container in addition to menu itself -->
+        <div id="sidr" class="nav-wrapper"> <!-- Allows for styling container in addition to menu itself -->
           <nav class="nav-menu clearfix">
             <ul>
               <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
@@ -70,6 +71,7 @@
 
   <!-- Javacript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='js/sidr-2.2.1/jquery.sidr.js') }}"></script>
   <script src="{{url_for('static', filename='js/navigation.js')}}"></script>
   {% block javascript %}{% endblock %}
 
