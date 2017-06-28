@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+    <!-- META Tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -11,46 +12,43 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidr-2.2.1/jquery.sidr.light.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidr-2.2.1/jquery.sidr.dark.css') }}">
     {% block stylesheets %}{% endblock %}   
 
   </head>
   <body>
     <div id="wrapper">
-
-      <!-- Site Header (Logo & Navigation) -->
-      <div id="header">
-
+      <div id="banner">
         <!-- Site Logo -->
         <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
 
-        <!-- Site Navigation -->
-        <button class="menu-button">Menu</button>
-        <div id="sidr" class="nav-wrapper"> <!-- Allows for styling container in addition to menu itself -->
-          <nav class="nav-menu clearfix">
-            <ul>
-              <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
-              <li class="nav-items"><a class="nav-links" href="{{ url_for('about_us') }}">About Us</a>
-                <ul class="sub-menu">
-                  <li class="nav-items"><a class="nav-links" href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
-                </ul>
-              </li>
-              <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">Environmental and Air Filtration Services</a>
-                <ul class="sub-menu">
-                  <li class="nav-items"><a class="nav-links" href="#!">Air Filtration Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental/Emissions Testing</a></li>
-                  <li class="nav-items"><a class="nav-links" href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
-                </ul>
-              </li>
-              <li class="nav-items"><a class="nav-links" href="{{ url_for('faqs') }}">FAQ's</a></li>
-              <li class="nav-items"><a class="nav-links" href="{{ url_for('contact_us') }}">Contact Us</a></li>
-            </ul>
-          </nav>
-        </div> <!-- end dropdown-navigation container div -->
-      </div> <!-- end header div -->
-      
+        <!-- Mobile Menu Icon -->
+        <button id="menu-icon" href="#sidr">Menu</button> 
 
+        <!-- Site Navigation -->
+        <nav id="sidr">
+          <ul>
+            <li><a>&larr;</a></li>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('about_us') }}">Our Mission</a>
+              <ul class="sub-menu">
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
+              </ul>
+            </li>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">Testing Services</a>
+              <ul class="sub-menu">
+                <li class="nav-items"><a class="nav-links" href="#!">Air Filtration Testing</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental/Emissions Testing</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
+              </ul>
+            </li>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('faqs') }}">FAQ's</a></li>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('contact_us') }}">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+      
       <!-- Slideshow for Desktop Layout -->
       <div id="photo-gallery"></div>
 
@@ -62,17 +60,21 @@
     </div> <!-- end wrapper div -->
   </body>
   <footer>
-    <p>Copyright &copy; Blue Heaven Technologies 2017</p>
     <p>2820 S. English Station Road</p>
     <p>Louisville, KY 40299</p>
     <p>502-357-0132</p>
     <p>info@blueheaventech.com</p>
+    <p>Copyright &copy; Blue Heaven Technologies 2017</p>
   </footer>
 
   <!-- Javacript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='js/sidr-2.2.1/jquery.sidr.js') }}"></script>
-  <script src="{{url_for('static', filename='js/navigation.js')}}"></script>
+  <script>
+    $(document).ready(function() {
+      $('#menu-icon').sidr();
+    });
+  </script>
   {% block javascript %}{% endblock %}
-
+  
 </html>

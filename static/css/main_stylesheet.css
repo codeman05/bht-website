@@ -2,29 +2,32 @@
 
 /* Default color: #0a2c6b; */
 
-body {
-  /*background-color: #0a2c6b;
-  color: #fff;*/
-}
 #wrapper {
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-left: 10px;
+  width: 100%;
+}
+
+/*** BANNER ***/
+#banner {
+  height: 75px;
+  width: 100%;
+  background-color:#0a2c6b;
+  background-color: lightblue; /* testing */
 }
 .logo {
   width: 25%;
-  height: 25%;
+  height: 80%;
   float: right;
 }
 
+/*** MOBILE MENU ICON ***/
+.menu-icon {
+  padding: 5px 10px;
+  border-radius: 7px;
+  text-transform: uppercase;
+  background-color: lightskyblue;
+}
 
 /*** NAVIGATION ***/
-.nav-wrapper {
-  width: 100%;
-}
-.nav-menu {
-  display: none;
-}
 .nav-items {
   list-style-type: none;
 }
@@ -39,41 +42,31 @@ body {
   display: none;  
 }
 
+/*** SLIDESHOW ***/
+#photo-gallery {
+  height: 350px;
+  width: 100%;
+  background-color: yellow;
+}
+
 /*** PAGE CONTENT ***/
 #content {
   width: 80%;
   margin: auto;
-}
-
-/*** CLEARFIX ***/
-.clearfix:after {
-  content: "";
-  display: table;
+  background-color: #fff;
 }
 
 /*** FOOTER ***/
 footer {
-  display: flex;
-  justify-content: center;
-  background-color: #0a2c6b;
   color: #fff;
+  background-color: #0a2c6b;
+}
+footer p {
+
 }
 
-footer span {
-  align-self: center; 
-}
 
-/*** BUTTON ***/
-.menu-button {
-  padding: 5px 10px;
-  border-radius: 7px;
-  text-transform: uppercase;
-  background-color: lightskyblue;
-}
 
-.showing-menu {
-  display: inline;
-}
 
 /*** CREW PAGE ***/
 .crew-photo {
