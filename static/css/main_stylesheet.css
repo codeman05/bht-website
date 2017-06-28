@@ -1,6 +1,6 @@
 @import "normalize.css";
 
-/* Default color: #0a2c6b; */
+/* Default color: #0a2c6b; 10, 44, 107*/
 
 #wrapper {
   width: 100%;
@@ -8,65 +8,79 @@
 
 /*** BANNER ***/
 #banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   height: 75px;
   width: 100%;
-  background-color:#0a2c6b;
-  background-color: lightblue; /* testing */
-}
-.logo {
-  width: 25%;
-  height: 80%;
-  float: right;
+  margin-bottom: 40px;
+  background-color: rgba(10, 44, 107, .8); 
+  color: #fff;
 }
 
 /*** MOBILE MENU ICON ***/
-.menu-icon {
-  padding: 5px 10px;
-  border-radius: 7px;
-  text-transform: uppercase;
-  background-color: lightskyblue;
+#menu-icon {
+  height: 35%;
+  width: 35%;
 }
 
-/*** NAVIGATION ***/
-.nav-items {
-  list-style-type: none;
-}
-.nav-links {
-  text-decoration: none;
-}
-.nav-items:hover ul {   /* Displays sub-menu when parent item is hovered */
-  display: inline;
-}
-.sub-menu {
-  position: absolute;
-  display: none;  
+/*** LOGO ***/
+.logo {
+  width: 50%;
+  height: 80%;
 }
 
-/*** SLIDESHOW ***/
-#photo-gallery {
-  height: 350px;
-  width: 100%;
-  background-color: yellow;
-}
+
 
 /*** PAGE CONTENT ***/
 #content {
   width: 80%;
   margin: auto;
-  background-color: #fff;
 }
 
 /*** FOOTER ***/
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   background-color: #0a2c6b;
 }
-footer p {
 
+
+
+/**************************   INDIVIDUAL PAGES   **************************/ 
+
+/*** SLIDESHOW on HOMEPAGE ***/
+.first-gallery-image {
+  display: inline-block;
 }
-
-
-
+.photo-gallery {
+  max-width: 400px;
+  background-color: #000;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.photo-gallery div {
+  background-color: #fff;
+  width: 100%;
+  display: inline-block;
+  display: none;
+} 
+.photo-gallery img {
+  width: 100%;
+  border-radius: 10% 25%;
+  height: auto;
+}
+#homepage-photo {
+  height: 70%;
+  width: 70%;
+  border-radius: 10%;
+  margin: 5px auto;
+}
 
 /*** CREW PAGE ***/
 .crew-photo {
