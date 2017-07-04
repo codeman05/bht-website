@@ -20,16 +20,15 @@
   <body>
     <div id="wrapper">
       <div id="banner">
-        <!-- Site Logo -->
-        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
-
         <!-- Mobile Menu Icon -->
-        <button id="menu-icon" href="#sidr">Menu</button> 
+        <a href="#sidr"><img id="menu-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a> 
+
+        <!-- Site Logo -->
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
 
         <!-- Site Navigation -->
         <nav id="sidr">
           <ul>
-            <li><a>&larr;</a></li>
             <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
             <li class="nav-items"><a class="nav-links" href="{{ url_for('about_us') }}">Our Mission</a>
               <ul class="sub-menu">
@@ -48,15 +47,11 @@
           </ul>
         </nav>
       </div>
-      
-      <!-- Slideshow for Desktop Layout -->
-      <div id="photo-gallery"></div>
 
       <!-- Content Area -->
       <div id="content">
         {% block content %}{% endblock %}
       </div> <!-- end content div -->
-
     </div> <!-- end wrapper div -->
   </body>
   <footer>
@@ -70,11 +65,8 @@
   <!-- Javacript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="{{ url_for('static', filename='js/sidr-2.2.1/jquery.sidr.js') }}"></script>
-  <script>
-    $(document).ready(function() {
-      $('#menu-icon').sidr();
-    });
-  </script>
+  <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
   {% block javascript %}{% endblock %}
   
 </html>

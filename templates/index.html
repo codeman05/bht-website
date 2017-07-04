@@ -6,9 +6,26 @@
 
 <!--Content to be displayed in body of the document.-->
 {% block content %}
-  <h1>Welcome to a Blue Heaven Technologies!</h1>
+  <!-- Slideshow  -->
+  <div class="photo-gallery">
+    <div class="first-gallery-image">
+      <img src="{{ url_for('static', filename='img/group_photos/group_photo1.jpg') }}" alt="" />
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='img/group_photos/group_photo2.jpg') }}" alt="" />
+    </div>
+  </div>
 
-  <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture. Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
+  <h1>Welcome to Blue Heaven Technologies!</h1>
 
-  <img src="#!" alt="Equipment Photo" />
+  <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture.</p>
+
+  <figure>
+    <img src="{{ url_for('static', filename='img/equipment/high_temp_duct.png') }}" alt="Equipment Photo" id="homepage-photo" />
+    <figcaption>High Temperature Recirculating Duct</figcaption>
+  </figure>
+  
+  <p>Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
+
+  
 {% endblock %}
