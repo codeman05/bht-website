@@ -1,6 +1,6 @@
 @import "normalize.css";
 
-/* Default color: #0a2c6b; 10, 44, 107*/
+/* Default color: #0a2c6b; rgb(10, 44, 107) */
 
 #wrapper {
   width: 100%;
@@ -9,42 +9,48 @@
 /*** BANNER ***/
 #banner {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
-  height: 75px;
+  height: 100px;
   width: 100%;
   margin-bottom: 40px;
-  background-color: rgba(10, 44, 107, .8); 
-  color: #fff;
+  background-color: rgba(10, 44, 107, 1); 
 }
 
 /*** MOBILE MENU ICON ***/
 #menu-icon {
-  height: 35%;
-  width: 35%;
+  height: 93px;
+  width: 93px;
+}
+nav {
+  display: none;  /* Hide navigation so that icon controls its display. */
 }
 
-/*** LOGO ***/
+/*** SITE LOGO ***/
 .logo {
-  width: 50%;
-  height: 80%;
+  /* Center the logo on the page */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 80px;
 }
-
-
 
 /*** PAGE CONTENT ***/
-#content {
+#content {  /* Change to flexbox */
   width: 80%;
   margin: auto;
+  font-family: Roboto, sans-serif;
+  line-height: 1.75rem;
 }
 
 /*** FOOTER ***/
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 200px;
+  width: 100%;
   color: #fff;
   background-color: #0a2c6b;
 }
@@ -72,20 +78,39 @@ footer {
 } 
 .photo-gallery img {
   width: 100%;
-  border-radius: 10% 25%;
+  border-radius: 10%;
   height: auto;
 }
 #homepage-photo {
   height: 70%;
   width: 70%;
   border-radius: 10%;
-  margin: 5px auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*** CREW PAGE ***/
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #0a2c6b;
+}
 .crew-photo {
-  max-width: 60%;
-  height: 150px;
+  width: 216px;
+  height: 250px;
+  max-width: 80%;
   padding: 10px;
-  border-radius: 40%;
+  border-radius: 10%;
+}
+.swirl {
+  width: 40%;
+  height: 100px;
+}
+.employee-name {
+  font-weight: bold;
 }

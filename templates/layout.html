@@ -12,7 +12,8 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/sidr-2.2.1/jquery.sidr.light.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
     {% block stylesheets %}{% endblock %}   
 
@@ -22,9 +23,6 @@
       <div id="banner">
         <!-- Mobile Menu Icon -->
         <a href="#sidr"><img id="menu-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a> 
-
-        <!-- Site Logo -->
-        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
 
         <!-- Site Navigation -->
         <nav id="sidr">
@@ -48,6 +46,11 @@
         </nav>
       </div>
 
+      <div id="logo-div">
+        <!-- Site Logo -->
+        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
+      </div>
+
       <!-- Content Area -->
       <div id="content">
         {% block content %}{% endblock %}
@@ -55,8 +58,7 @@
     </div> <!-- end wrapper div -->
   </body>
   <footer>
-    <p>2820 S. English Station Road</p>
-    <p>Louisville, KY 40299</p>
+    <p>2820 S. English Station Road, Louisville, KY 40299</p>
     <p>502-357-0132</p>
     <p>info@blueheaventech.com</p>
     <p>Copyright &copy; Blue Heaven Technologies 2017</p>
@@ -64,9 +66,8 @@
 
   <!-- Javacript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="{{ url_for('static', filename='js/sidr-2.2.1/jquery.sidr.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/navigation.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/slideshow.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js"></script>
+  <script src="{{ url_for('static', filename='js/custom_js.js') }}"></script>
   {% block javascript %}{% endblock %}
   
 </html>
