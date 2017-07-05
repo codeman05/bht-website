@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
     <!-- Stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
     {% block stylesheets %}{% endblock %}   
@@ -33,11 +33,13 @@
                 <li class="nav-items"><a class="nav-links" href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
               </ul>
             </li>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">Testing Services</a>
+            <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">What We Do</a>
               <ul class="sub-menu">
-                <li class="nav-items"><a class="nav-links" href="#!">Air Filtration Testing</a></li>
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental/Emissions Testing</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('air_filtration_testing') }}">Air Filtration Testing</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental Testing</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('emissions_testing') }}">Industrial Emissions Testing</a></li>
                 <li class="nav-items"><a class="nav-links" href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
+                <li class="nav-items"><a class="nav-links" href="{{ url_for('play_day') }}">Play Days</a></li>
               </ul>
             </li>
             <li class="nav-items"><a class="nav-links" href="{{ url_for('faqs') }}">FAQ's</a></li>
@@ -59,8 +61,8 @@
   </body>
   <footer>
     <p>2820 S. English Station Road, Louisville, KY 40299</p>
-    <p>502-357-0132</p>
-    <p>info@blueheaventech.com</p>
+    <p><a href="tel:+15023570132">502-357-0132</a></p>
+    <p><a href="mailto:info@blueheaventech.com">info@blueheaventech.com</a></p>
     <p>Copyright &copy; Blue Heaven Technologies 2017</p>
   </footer>
 

@@ -30,13 +30,25 @@ def maps():
 def services():
     return render_template('services.html')
 
-@app.route('/services/test-dusts/')
-def test_dusts():
-    return render_template('test_dusts.html')
+@app.route('/services/air-filtration-testing/')
+def air_filtration_testing():
+    return render_template('air_filtration_testing.html')
+
+@app.route('/services/emissions-testing/')
+def emissions_testing():
+    return render_template('emissions_testing.html')
 
 @app.route('/services/environmental-testing/')
 def environmental_testing():
     return render_template('environmental_testing.html')
+
+@app.route('/services/playday/')
+def play_day():
+    return render_template('play_day.html')
+
+@app.route('/services/test-dusts/')
+def test_dusts():
+    return render_template('test_dusts.html')
 
 @app.route('/contact-us/')
 def contact_us():

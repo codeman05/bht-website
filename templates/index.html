@@ -6,6 +6,8 @@
 
 <!--Content to be displayed in body of the document.-->
 {% block content %}
+  <h2 class="welcome-text">Welcome to Blue Heaven Technologies!</h2>
+
   <!-- Slideshow  -->
   <div class="photo-gallery">
     <div class="first-gallery-image">
@@ -19,16 +21,17 @@
     </div>
   </div>
 
-  <h2>Welcome to Blue Heaven Technologies!</h2>
+  <section class="section-block">
+    <h2>Recognized Leader</h2>
+    <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
 
-  <p>Blue Heaven Technologies tests commercial and residential air filters, flat sheet air filter media, room air cleaners, vacuum cleaners, automobile cabin air filters, and industrial pulse clean systems. We can also test air filters in extreme environments such as high temperatures, high humidity and moisture.</p>
+    <p>Learn more about our <a href="{{ url_for('services') }}">Testing Services</a></p>
+  </section>
 
-  <figure>
-    <img src="{{ url_for('static', filename='img/equipment/high_temp_duct.png') }}" alt="Equipment Photo" id="homepage-photo" />
-    <figcaption>High Temperature Recirculating Duct</figcaption>
-  </figure>
-  
-  <p>Blue Heaven Technologies is also a supplier of specialized testing dusts for those customers that do their own testing.</p>
+  <section class="section-block">
+    <h2>Rely on the Industry's Experts</h2>
+    <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
 
-  
+    <p>Learn more about the <a href="{{ url_for('crew') }}">Blue Heaven Crew</a></p>
+  </section>
 {% endblock %}

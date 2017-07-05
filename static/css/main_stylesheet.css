@@ -2,69 +2,83 @@
 
 /* Default color: #0a2c6b; rgb(10, 44, 107) */
 
+/*** GENERAL ***/
 #wrapper {
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.75em;
+}
+#banner, 
+footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(10, 44, 107, .1);
+}
+#logo-div,
+#content {
+  width: 90%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+h2,
+.welcome-text {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  text-align: center;
+}
+#banner,
+.section-block,
+table {
+  margin-bottom: 2.5em;
 }
 
 /*** BANNER ***/
 #banner {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  width: 100%;
-  margin-bottom: 40px;
-  background-color: rgba(10, 44, 107, 1); 
+  height: 6.25em;
 }
 
 /*** MOBILE MENU ICON ***/
 #menu-icon {
-  height: 93px;
-  width: 93px;
+  height: 6.25em;
+  width: 6.25em;
 }
+
+/*** NAVIGATION ***/
 nav {
-  display: none;  /* Hide navigation so that icon controls its display. */
+  display: none;  /* Hide navigation so that icon(javascript) controls its display. */
 }
 
 /*** SITE LOGO ***/
 .logo {
   /* Center the logo on the page */
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 80%;
-  margin-bottom: 80px;
-}
-
-/*** PAGE CONTENT ***/
-#content {  /* Change to flexbox */
-  width: 80%;
-  margin: auto;
-  font-family: Roboto, sans-serif;
-  line-height: 1.75rem;
+  margin: 4.00em auto;  
 }
 
 /*** FOOTER ***/
 footer {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 200px;
-  width: 100%;
-  color: #fff;
-  background-color: #0a2c6b;
+  height: 12.5em;
 }
-
-
+footer p,
+footer a {
+  line-height: 0.5em;
+  color: #fff;
+}
 
 /**************************   INDIVIDUAL PAGES   **************************/ 
 
-/*** SLIDESHOW on HOMEPAGE ***/
+/*** HOMEPAGE ***/
 .first-gallery-image {
   display: inline-block;
 }
 .photo-gallery {
-  max-width: 400px;
+  max-width: 25em;
   background-color: #000;
   margin: 0 auto;
   text-align: center;
@@ -85,10 +99,7 @@ footer {
   height: 70%;
   width: 70%;
   border-radius: 10%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.313em auto;
 }
 
 /*** CREW PAGE ***/
@@ -97,20 +108,46 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
-  border-bottom: 2px solid #0a2c6b;
+  margin-bottom: 3.125em;
+  border-bottom: .125em solid #0a2c6b;  /* For visual separation */
 }
 .crew-photo {
-  width: 216px;
-  height: 250px;
+  width: 13.500em;
+  height: 15.625em;
   max-width: 80%;
-  padding: 10px;
+  padding: .625em;
   border-radius: 10%;
+}
+.employee-name {
+  font-weight: bold;
 }
 .swirl {
   width: 40%;
   height: 100px;
 }
-.employee-name {
-  font-weight: bold;
+
+/*** OUR MISSION PAGE ***/
+.page-photo {
+  display: block;
+  margin: 2.50em auto;
+  height: 15em;
+  width: 17.5em;
+  border-radius: 10%;
+}
+
+/*** OUR MISSION PAGE ***/
+section ul li {
+  list-style-type: none;
+}
+
+
+/*** ENVIRONMENTAL/EMISSIONS TESTING PAGE ***/
+table th,
+table td {
+  text-align: center;
+  padding: .313em;
+  border-bottom: .125em solid #0a2c6b;
+}
+table tr:nth-of-type(even) {
+  background-color: #D5DAE3;
 }
