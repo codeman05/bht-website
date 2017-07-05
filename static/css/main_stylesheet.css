@@ -13,7 +13,7 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: rgba(10, 44, 107, .1);
+  background-color: rgba(10, 44, 107, 1);
 }
 #logo-div,
 #content {
@@ -136,9 +136,9 @@ footer a {
 }
 
 /*** OUR MISSION PAGE ***/
-section ul li {
+/*section ul li {
   list-style-type: none;
-}
+}*/
 
 
 /*** ENVIRONMENTAL/EMISSIONS TESTING PAGE ***/
