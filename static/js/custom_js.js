@@ -5,18 +5,20 @@ $('#menu-icon').sidr();
 
 /***** Slideshow *****/
 var currentIndex = 0;
-var items = $('.photo-gallery div');
-var itemAmt = items.length;
+var photos = $('.photo-gallery div');
+var photoAmt = photos.length;
 
 function cyclePhotos () {
-    var item = $('.photo-gallery div').eq(currentIndex);
-    items.hide();
-    item.css('display', 'inline-block');
+    var photo = $('.photo-gallery div').eq(currentIndex);
+    photos.hide();
+    photo.css('display', 'inline-block');
 }
+
+cyclePhotos();
 
 var autoSlide = setInterval(function () {
 currentIndex += 1;
-if ( currentIndex > itemAmt - 1 ) {
+if ( currentIndex > photoAmt - 1 ) {
     currentIndex = 0;
 }
 cyclePhotos();

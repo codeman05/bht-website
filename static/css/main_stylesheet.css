@@ -78,7 +78,7 @@ footer a {
   display: inline-block;
 }
 .photo-gallery {
-  max-width: 25em;
+  /*max-width: 25em;*/
   background-color: #000;
   margin: 0 auto;
   text-align: center;
@@ -108,8 +108,12 @@ footer a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3.125em;
-  border-bottom: .125em solid #0a2c6b;  /* For visual separation */
+}
+.separator {
+  background-color: #0a2c6b;
+  margin: 3.125em auto;
+  height: .313em;
+  width: 18.750em;
 }
 .crew-photo {
   width: 13.500em;

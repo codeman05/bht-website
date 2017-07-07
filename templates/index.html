@@ -4,20 +4,17 @@
 <!--Title of Page.-->
 {% block title %}Home {{ super() }}{% endblock %}
 
-<!--Content to be displayed in body of the document.-->
+<!-- Content to be displayed in body of the document.-->
 {% block content %}
   <h2 class="welcome-text">Welcome to Blue Heaven Technologies!</h2>
 
   <!-- Slideshow  -->
   <div class="photo-gallery">
     <div class="first-gallery-image">
-      <img src="{{ url_for('static', filename='img/group_photos/group_photo1.jpg') }}" alt="" />
+      <img src="{{ url_for('static', filename='assets/group_photo1.jpg') }}" alt="" />
     </div>
     <div>
-      <img src="{{ url_for('static', filename='img/group_photos/group_photo2.jpg') }}" alt="" />
-    </div>
-    <div>
-      <img src="{{ url_for('static', filename='img/inda_2017.jpg') }}" alt="" />
+      <img src="{{ url_for('static', filename='assets/group_photo2.jpg') }}" alt="" />
     </div>
   </div>
 
