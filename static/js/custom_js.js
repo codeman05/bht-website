@@ -1,6 +1,6 @@
 /***** Navigation *****/
 
-$('#menu-icon').sidr();
+$('.nav-icon').sidr();
 
 
 /***** Slideshow *****/

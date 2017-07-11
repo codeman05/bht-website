@@ -13,6 +13,7 @@
 
     <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
     {% block stylesheets %}{% endblock %}   
@@ -22,58 +23,91 @@
 
   </head>
   <body>
-    <div id="wrapper">
-      <div id="banner">
-        <!-- Mobile Menu Icon -->
-        <a href="#sidr"><img id="menu-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a> 
+    <div class="container-fluid">
+      
 
-        <!-- Site Navigation -->
-        <nav id="sidr">
-          <ul>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('home') }}">Home</a></li>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('about_us') }}">Our Mission</a>
-              <ul class="sub-menu">
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
-              </ul>
-            </li>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('services') }}">What We Do</a>
-              <ul class="sub-menu">
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('air_filtration_testing') }}">Air Filtration Testing</a></li>
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('environmental_testing') }}">Environmental Testing</a></li>
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('emissions_testing') }}">Industrial Emissions Testing</a></li>
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
-                <li class="nav-items"><a class="nav-links" href="{{ url_for('play_day') }}">Play Days</a></li>
-              </ul>
-            </li>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('faqs') }}">FAQ's</a></li>
-            <li class="nav-items"><a class="nav-links" href="{{ url_for('contact_us') }}">Contact Us</a></li>
-          </ul>
-        </nav>
+      <!-- ####### NAVIGATION ####### -->
+      <div class="row accent-bar">
+        <div class="col-sm-12">
+          <!-- ####### ICON ####### -->
+          <a href="#sidr"><img class="nav-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a>
+          <!-- ####### END ICON ####### -->
+
+          <!-- ####### MENU ####### -->
+          <nav id="sidr">
+            <ul>
+              <li><a href="{{ url_for('home') }}">Home</a></li>
+              <li><a href="{{ url_for('about_us') }}">Our Mission</a>
+                <ul>
+                  <li><a href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ url_for('services') }}">What We Do</a>
+                <ul>
+                  <li><a href="{{ url_for('air_filtration_testing') }}">Air Filtration Testing</a></li>
+                  <li><a href="{{ url_for('environmental_testing') }}">Environmental Testing</a></li>
+                  <li><a href="{{ url_for('emissions_testing') }}">Industrial Emissions Testing</a></li>
+                  <li><a href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
+                  <li><a href="{{ url_for('play_day') }}">Play Days</a></li>
+                </ul>
+              </li>
+              <li><a href="{{ url_for('faqs') }}">FAQ's</a></li>
+              <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!-- ####### END MENU ####### -->
+        </div>  
+      </div>  
+      <!-- ####### END NAVIGATION ####### -->
+
+
+
+      <!-- ####### HEADER ####### -->
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <!-- ####### LOGO ####### -->
+          <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo img-responsive" /></a>
+        </div>
       </div>
+      <!-- ####### END HEADER ####### -->
 
-      <div id="logo-div">
-        <!-- Site Logo -->
-        <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo" /></a>
+
+
+      <!-- ####### CONTENT ####### -->
+      <div class="row">
+        <div class="col-sm-12">
+          {% block content %}{% endblock %}
+        </div>
+      </div> 
+      <!-- ####### END CONTENT ####### -->
+
+
+
+    </div> <!-- end container div -->
+
+
+
+    <!-- ####### FOOTER ####### -->
+    <div class="row">
+      <div class="col-sm-12 text-center accent-bar footer">
+        <address>
+          <strong>Blue Heaven Technologies</strong><br>
+          2820 S. English Station Road<br>
+          Louisville, KY 40299<br>
+          502-357-0132<br>
+          info@blueheaventech.com</a><br>
+        </address>
+        <p class="copyright-text">Copyright &copy; Blue Heaven Technologies 2017</p>
       </div>
-
-      <!-- Content Area -->
-      <div id="content">
-        {% block content %}{% endblock %}
-      </div> <!-- end content div -->
-    </div> <!-- end wrapper div -->
-  </body>
-  <footer>
-    <p>2820 S. English Station Road</p> 
-    <p>Louisville, KY 40299</p>
-    <p><a href="tel:+15023570132">502-357-0132</a></p>
-    <p><a href="mailto:info@blueheaventech.com">info@blueheaventech.com</a></p>
-    <p>Copyright &copy; Blue Heaven Technologies 2017</p>
-  </footer>
+    </div> 
+    <!-- ####### END FOOTER ####### -->
 
   <!-- Javacript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js"></script>
   <script src="{{ url_for('static', filename='js/custom_js.js') }}"></script>
   {% block javascript %}{% endblock %}
-  
+
+  </body>
 </html>

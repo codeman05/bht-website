@@ -1,75 +1,58 @@
-@import "normalize.css";
-
 /* Default color: #0a2c6b; rgb(10, 44, 107) */
 
-/*** GENERAL ***/
-#wrapper {
-  width: 100%;
+
+/**************************   NEW BOOTSTRAP   **************************/ 
+body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.75em;
 }
-#banner, 
-footer {
-  display: flex;
-  align-items: center;
-  width: 100%;
+
+
+.logo {
+  margin-top: 4.00em;
+  margin-bottom: 4.00em;  
+}
+
+.accent-bar {
   background-color: rgba(10, 44, 107, 1);
+  color: #fff;
+  margin-bottom: 2.5em;
 }
-#logo-div,
-#content {
-  width: 90%;
-  margin: auto;
+
+.nav-icon {
+  height: 6.25em;
+  width: 6.25em;
 }
-a {
-  text-decoration: none;
+
+nav {
+  /* Hide navigation so that icon(javascript) controls its display. */
+  display: none;  
 }
+
+.footer {
+  line-height: 0.5em;
+  padding-top: 0.938em;
+  padding-bottom: 0.938em;
+  margin-bottom: 0;
+}
+
 h2,
 .welcome-text {
   font-family: 'Roboto Slab', serif;
   font-weight: bold;
   text-align: center;
 }
-#banner,
+
 .section-block,
 table {
   margin-bottom: 2.5em;
 }
 
-/*** BANNER ***/
-#banner {
-  height: 6.25em;
+.copyright-text {
+  margin-top: 2.0em;
 }
 
-/*** MOBILE MENU ICON ***/
-#menu-icon {
-  height: 6.25em;
-  width: 6.25em;
-}
 
-/*** NAVIGATION ***/
-nav {
-  display: none;  /* Hide navigation so that icon(javascript) controls its display. */
-}
-
-/*** SITE LOGO ***/
-.logo {
-  /* Center the logo on the page */
-  display: block;
-  width: 80%;
-  margin: 4.00em auto;  
-}
-
-/*** FOOTER ***/
-footer {
-  flex-direction: column;
-  justify-content: center;
-  height: 12.5em;
-}
-footer p,
-footer a {
-  line-height: 0.5em;
-  color: #fff;
-}
 
 /**************************   INDIVIDUAL PAGES   **************************/ 
 
