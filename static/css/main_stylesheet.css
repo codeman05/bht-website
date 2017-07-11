@@ -5,8 +5,15 @@
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.75em;
+  width: 100%;
+  height: 100%;
 }
 
+.container-fluid {
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+}
 
 .logo {
   margin-top: 4.00em;
@@ -16,7 +23,6 @@ body {
 .accent-bar {
   background-color: rgba(10, 44, 107, 1);
   color: #fff;
-  margin-bottom: 2.5em;
 }
 
 .nav-icon {
@@ -30,10 +36,18 @@ nav {
 }
 
 .footer {
-  line-height: 0.5em;
   padding-top: 0.938em;
   padding-bottom: 0.938em;
+  margin-top: 4.0em;
   margin-bottom: 0;
+}
+
+.footer-icons {
+  padding-right: 5px;
+}
+
+.footer a {
+  color: #fff;
 }
 
 h2,
@@ -45,45 +59,24 @@ h2,
 
 .section-block,
 table {
-  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .copyright-text {
-  margin-top: 2.0em;
+  margin-top: 1.25em;
 }
 
 
 
 /**************************   INDIVIDUAL PAGES   **************************/ 
 
-/*** HOMEPAGE ***/
-.first-gallery-image {
-  display: inline-block;
-}
-.photo-gallery {
-  /*max-width: 25em;*/
-  background-color: #000;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-.photo-gallery div {
-  background-color: #fff;
-  width: 100%;
-  display: inline-block;
-  display: none;
-} 
-.photo-gallery img {
-  width: 100%;
-  border-radius: 10%;
-  height: auto;
-}
-#homepage-photo {
-  height: 70%;
-  width: 70%;
-  border-radius: 10%;
-  margin: 0.313em auto;
-}
+/*.item {
+  height: 800px;
+  width: 800px;
+}*/
+
+
 
 /*** CREW PAGE ***/
 .photo-container {
@@ -92,9 +85,13 @@ table {
   justify-content: center;
   align-items: center;
 }
+
+.image-text {
+  margin-top: 2.75em;
+}
 .separator {
   background-color: #0a2c6b;
-  margin: 3.125em auto;
+  margin: 2.75em auto;
   height: .313em;
   width: 18.750em;
 }

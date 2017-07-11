@@ -23,3 +23,9 @@ if ( currentIndex > photoAmt - 1 ) {
 }
 cyclePhotos();
 }, 3000);
+
+
+/***** Contact Form *****/
+$('#contact-submit').click(function () {
+    alert('This function is not yet active. Try again at a later date.');
+});
