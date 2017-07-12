@@ -6,12 +6,10 @@
 
 <!-- Content to be displayed in body of the document.-->
 {% block content %}
-  <h2 class="welcome-text page-header text-center">Welcome to Blue Heaven Technologies!</h2>
-
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-sm-6 col-sm-offset-3">
       <!-- ####### CAROUSEL ####### -->
-      <div id="carousel-slideshow" class="carousel slide jumbotron" data-ride="carousel" data-interval="3000">
+      <div id="carousel-slideshow" class="carousel slide" data-ride="carousel" data-interval="3000">
         <!-- Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#carousel-slideshow" data-slide-to="0" class="active"></li>
@@ -23,36 +21,36 @@
 
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
-          <div class="item img-responsive active">
+          <div class="item active">
             <img src="https://via.placeholder.com/1024x700" alt="...">
             <div class="carousel-caption">
               <h3>Slide 1</h3>
               <a href="#">A link</a>
             </div>
           </div>
-          <div class="item img-responsive">
+          <div class="item">
             <img src="https://via.placeholder.com/1024x700" alt="...">
             <div class="carousel-caption">
               <h3>Slide 2</h3>
               <a href="#">A link</a>
             </div>
           </div>
-          <div class="item img-responsive">
-            <img src="https://via.placeholder.com/1024x700" alt="jack">
+          <div class="item">
+            <img src="https://via.placeholder.com/1024x700" alt="...">
             <div class="carousel-caption">
               <h3>Slide 3</h3>
               <a href="#">A link</a>
             </div>
           </div>
-          <div class="item img-responsive">
-            <img src="https://via.placeholder.com/1024x700" alt="joe and casey">
+          <div class="item">
+            <img src="https://via.placeholder.com/1024x700" alt="...">
             <div class="carousel-caption">
               <h3>Slide 4</h3>
               <a href="#">A link</a>
             </div>
           </div>
-          <div class="item img-responsive">
-            <img src="https://via.placeholder.com/1024x700" alt="joe and casey">
+          <div class="item">
+            <img src="https://via.placeholder.com/1024x700" alt="...">
             <div class="carousel-caption">
               <h3>Slide 5</h3>
               <a href="#">A link</a>
@@ -73,22 +71,22 @@
       <!-- ####### END CAROUSEL ####### -->
       </div>
     </div>
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <section class="section-block">
+        <h3 class="section-title">Recognized Leader</h3>
+        <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
 
-        
+        <p>Learn more about our <a href="{{ url_for('what_we_do') }}">Testing Services</a>.</p>
+      </section>
 
+      <section class="section-block">
+        <h3 class="section-title">Rely on the Industry's Experts</h3>
+        <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
 
-
-  <section class="section-block">
-    <h2>Recognized Leader</h2>
-    <p>Blue Heaven Technologies is a recognized leader in providing state-of-the-art air filtration testing and analytical services for air filtration and environmental emissions. <em>No other laboratory offers the range of air filtration testing services with experienced technical personnel as Blue Heaven.</em> From flat sheet efficiency tests to industrial vapor emissions testing, Blue Heaven can perform the testing services you need reliably and economically.</p>
-
-    <p>Learn more about our <a href="{{ url_for('services') }}">Testing Services</a>.</p>
-  </section>
-
-  <section class="section-block">
-    <h2>Rely on the Industry's Experts</h2>
-    <p>Blue Heaven is stafffed with trained specialists and highly experienced technicians who have spent their careers in the air filtration business. They know air filters and applications and the associated testing procedures to give you accurate results in a professional manner. The combined experience of our staff incorporates virtually every air filtration and air quality standard in use today.</p>
-
-    <p>Learn more about the <a href="{{ url_for('crew') }}">Blue Heaven Crew</a>.</p>
-  </section>
+        <p>Learn more about the <a href="{{ url_for('crew') }}">Blue Heaven Crew</a>.</p>
+      </section>
+    </div>
+  </div>
 {% endblock %}

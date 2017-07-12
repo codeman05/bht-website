@@ -7,9 +7,9 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/about-us/')
-def about_us():
-    return render_template('about_us.html')
+@app.route('/mission/')
+def our_mission():
+    return render_template('our_mission.html')
 
 @app.route('/news/')
 def news():
@@ -27,9 +27,9 @@ def faqs():
 def maps():
     return render_template('maps.html')
 
-@app.route('/services/')
-def services():
-    return render_template('services.html')
+@app.route('/what-we-do/')
+def what_we_do():
+    return render_template('what_we_do.html')
 
 @app.route('/services/air-filtration-testing/')
 def air_filtration_testing():

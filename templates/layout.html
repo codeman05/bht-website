@@ -23,23 +23,23 @@
 
   </head>
   <body>
-    <!-- ####### NAVIGATION ####### -->
+    <!-- ####### ACCENT BAR ####### -->
     <div class="row accent-bar">
       <div class="col-sm-12">
         <!-- ####### ICON ####### -->
         <a href="#sidr"><img class="nav-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a>
         <!-- ####### END ICON ####### -->
 
-        <!-- ####### MENU ####### -->
+        <!-- ####### NAVIGATION ####### -->
         <nav id="sidr">
           <ul>
             <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about_us') }}">Our Mission</a>
+            <li><a href="{{ url_for('our_mission') }}">Our Mission</a>
               <ul>
                 <li><a href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
               </ul>
             </li>
-            <li><a href="{{ url_for('services') }}">What We Do</a>
+            <li><a href="{{ url_for('what_we_do') }}">What We Do</a>
               <ul>
                 <li><a href="{{ url_for('air_filtration_testing') }}">Air Filtration Testing</a></li>
                 <li><a href="{{ url_for('environmental_testing') }}">Environmental Testing</a></li>
@@ -52,10 +52,11 @@
             <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
           </ul>
         </nav>
-        <!-- ####### END MENU ####### -->
+        <!-- ####### END NAVIGATION ####### -->
       </div>  
+
     </div>  
-    <!-- ####### END NAVIGATION ####### -->
+    <!-- ####### END ACCENT BAR ####### -->
 
     <div class="container-fluid">
       

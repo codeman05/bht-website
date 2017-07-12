@@ -1,10 +1,8 @@
-/* Default color: #0a2c6b; rgb(10, 44, 107) */
+/**************************   GENERAL   **************************/ 
 
-
-/**************************   NEW BOOTSTRAP   **************************/ 
 body {
   font-family: 'Roboto', sans-serif;
-  line-height: 1.75em;
+  line-height: 2.00em;
   width: 100%;
   height: 100%;
 }
@@ -15,15 +13,37 @@ body {
   margin: auto;
 }
 
-.logo {
-  margin-top: 4.00em;
-  margin-bottom: 4.00em;  
+.section-title {
+  font-family: 'Roboto Slab', serif;
 }
+
+.section-block {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+}
+
+.page-header {
+  text-align: center;
+}
+
+.page-photo {
+  display: block;
+  margin: 2.50em auto;
+  border-radius: 10%;
+}
+
+.services-tag {
+  font-family: 'Roboto Slab', serif;
+}
+
+/**************************   ACCENT BAR   **************************/ 
 
 .accent-bar {
   background-color: rgba(10, 44, 107, 1);
   color: #fff;
 }
+
+/**************************   NAVIGATION   **************************/ 
 
 .nav-icon {
   height: 6.25em;
@@ -35,6 +55,14 @@ nav {
   display: none;  
 }
 
+/**************************   HEADER   **************************/ 
+
+.logo {
+  margin-top: 1.75em;
+  margin-bottom: 1.75em;  
+}
+
+/**************************   FOOTER   **************************/ 
 .footer {
   padding-top: 0.938em;
   padding-bottom: 0.938em;
@@ -50,35 +78,30 @@ nav {
   color: #fff;
 }
 
-h2,
-.welcome-text {
-  font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  text-align: center;
-}
-
-.section-block,
-table {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
 .copyright-text {
   margin-top: 1.25em;
 }
 
-
-
 /**************************   INDIVIDUAL PAGES   **************************/ 
 
-/*.item {
-  height: 800px;
-  width: 800px;
-}*/
+/**************************   
+HOME  
+**************************/
+
+#carousel-slideshow {
+  margin: 1.80em auto;
+}
+
+/**************************   
+OUR MISSION  
+**************************/
 
 
 
-/*** CREW PAGE ***/
+/**************************   
+THE BLUE HEAVEN CREW
+**************************/
+
 .photo-container {
   display: flex;
   flex-direction: column;
@@ -87,14 +110,16 @@ table {
 }
 
 .image-text {
-  margin-top: 2.75em;
+  margin: 2.25em auto;
 }
+
 .separator {
-  background-color: #0a2c6b;
-  margin: 2.75em auto;
+  margin: 0 auto 2.25em;
   height: .313em;
   width: 18.750em;
+  background-color: #0a2c6b;
 }
+
 .crew-photo {
   width: 13.500em;
   height: 15.625em;
@@ -102,30 +127,20 @@ table {
   padding: .625em;
   border-radius: 10%;
 }
+
 .employee-name {
   font-weight: bold;
 }
-.swirl {
-  width: 40%;
-  height: 100px;
-}
 
-/*** OUR MISSION PAGE ***/
-.page-photo {
-  display: block;
-  margin: 2.50em auto;
-  height: 15em;
-  width: 17.5em;
-  border-radius: 10%;
-}
-
-/*** OUR MISSION PAGE ***/
-/*section ul li {
-  list-style-type: none;
-}*/
+/**************************   
+WHAT WE DO   
+**************************/
 
 
-/*** ENVIRONMENTAL/EMISSIONS TESTING PAGE ***/
+/**************************   
+ENVIRONMENTAL TESTING
+**************************/
+
 table th,
 table td {
   text-align: center;
@@ -135,3 +150,18 @@ table td {
 table tr:nth-of-type(even) {
   background-color: #D5DAE3;
 }
+
+/**************************   
+PLAY DAY
+**************************/
+
+.photo-line {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+/*** add div tags to all pages */
