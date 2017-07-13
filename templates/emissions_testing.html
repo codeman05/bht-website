@@ -8,16 +8,13 @@
 {% block content %}
   <h2 class="page-header">Industrial Emissions Testing</h2>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <section class="section-block">
         <p>No one knows more about industrial emissions testing than Blue Heaven. We have made numerous processes more efficient and reliable than ever by introducing new testing technologies and innovative procedures. Our PC based data acquisition equipment provides immediate results. It is the most advanced, reliable testing equipment available.</p>
       </section>
-      <div class="col-sm-2">
-        <figure>
-          <img src="https://via.placeholder.com/200x200" alt="" >
-          <figcaption>Caption</figcaption>
+      <figure>
+          <img src="{{ url_for('static', filename='img/working_photos/industrial_lab.jpg') }}" class="page-photo" alt="" >
         </figure>
-      </div>
     </div>
   </div>
 {% endblock %}

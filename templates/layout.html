@@ -1,111 +1,63 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <!-- META Tags -->
+    <!-- ####### META TAGS ####### -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Title -->
+    <!-- ####### TITLE ####### -->
     <title>{% block title %}{% endblock title %} | BHT</title>
 
-    <!-- Favicon -->
+    <!-- ####### FAVICON ####### -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
 
-    <!-- Stylesheets -->
+    <!-- ####### STYLESHEETS ####### -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main_stylesheet.css') }}">
     {% block stylesheets %}{% endblock %}   
-
-    <!-- Top Javascript -->
-    {% block top_javascript %}{% endblock %}
-
   </head>
   <body>
-    <!-- ####### ACCENT BAR ####### -->
-    <div class="row accent-bar">
-      <div class="col-sm-12">
-        <!-- ####### ICON ####### -->
-        <a href="#sidr"><img class="nav-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a>
-        <!-- ####### END ICON ####### -->
+    <div class="container-fluid"> 
+      <!-- ####### ACCENT BAR ####### -->
+      <div class="row accent-bar">
+        <div class="col-sm-12">
+          <!-- ####### ICON ####### -->
+          <a href="#sidr"><img class="nav-icon" src="{{ url_for('static', filename='img/menu_icon.svg') }}" alt="navigation"></a>
+          <!-- ####### END ICON ####### -->
 
-        <!-- ####### NAVIGATION ####### -->
-        <nav id="sidr">
-          <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('our_mission') }}">Our Mission</a>
-              <ul>
-                <li><a href="{{ url_for('crew') }}">The Blue Heaven Crew</a></li>
-              </ul>
-            </li>
-            <li><a href="{{ url_for('what_we_do') }}">What We Do</a>
-              <ul>
-                <li><a href="{{ url_for('air_filtration_testing') }}">Air Filtration Testing</a></li>
-                <li><a href="{{ url_for('environmental_testing') }}">Environmental Testing</a></li>
-                <li><a href="{{ url_for('emissions_testing') }}">Industrial Emissions Testing</a></li>
-                <li><a href="{{ url_for('test_dusts') }}">Test Dusts</a></li>
-                <li><a href="{{ url_for('play_day') }}">Play Days</a></li>
-              </ul>
-            </li>
-            <li><a href="{{ url_for('faqs') }}">FAQ's</a></li>
-            <li><a href="{{ url_for('contact_us') }}">Contact Us</a></li>
-          </ul>
-        </nav>
-        <!-- ####### END NAVIGATION ####### -->
+          <!-- ####### NAVIGATION ####### -->
+          {% include 'partials/navigation.html' %}
+          <!-- ####### END NAVIGATION ####### -->  
+        </div>  
       </div>  
-
-    </div>  
-    <!-- ####### END ACCENT BAR ####### -->
-
-    <div class="container-fluid">
+      <!-- ####### END ACCENT BAR ####### -->
+        
+      <!-- ####### BANNER ####### -->
+      {% include 'partials/banner.html' %}
       
-      <!-- ####### HEADER ####### -->
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-          <!-- ####### LOGO ####### -->
-          <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='img/logo_transparent.png') }}" alt="Blue Heaven Tech Logo" class="logo img-responsive" /></a>
-        </div>
-      </div>
-      <!-- ####### END HEADER ####### -->
-
-
-
-      <!-- ####### CONTENT ####### -->
-      <div class="row">
+      <!-- ####### CAROUSEL ####### -->
+      {% block carousel %}{% endblock %}
+  
+      <!-- ####### MAIN CONTENT ####### -->
+      <div class="row inner-container">
         <div class="col-sm-12">
           {% block content %}{% endblock %}
         </div>
-      </div> 
-      <!-- ####### END CONTENT ####### -->
-
-
-
-    </div> <!-- end container div -->
-
-
-
-    <!-- ####### FOOTER ####### -->
-    <div class="row">
-      <div class="col-sm-12 text-center accent-bar footer">
-        <address>
-          <strong>Blue Heaven Technologies</strong><br>
-          <span class="glyphicon glyphicon-map-marker footer-icons"></span> <a href="https://www.google.com/maps/place/2820+S+English+Station+Rd,+Louisville,+KY+40299/@38.194707,-85.4771946,17z/data=!3m1!4b1!4m5!3m4!1s0x8869a2f90d5edfcf:0xbc18f275beded6d3!8m2!3d38.194707!4d-85.4750059">2820 S. English Station Road</a><br>
-          Louisville, KY 40299<br>
-          <span class="glyphicon glyphicon-earphone footer-icons"></span> <a href="tel:+15023570132">502-357-0132</a><br>
-          <span class="glyphicon glyphicon-envelope footer-icons"></span> <a href="mailto:info@blueheaventech.com">info@blueheaventech.com</a><br>
-        </address>
-        <p class="copyright-text">Copyright &copy; Blue Heaven Technologies 2017</p>
       </div>
-    </div> 
-    <!-- ####### END FOOTER ####### -->
+      
+      <!-- ####### FOOTER ####### -->
+      {% include 'partials/footer.html' %}
 
-  <!-- Javacript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js"></script>
-  <script src="{{ url_for('static', filename='js/custom_js.js') }}"></script>
-  {% block javascript %}{% endblock %}
+    </div> <!-- ####### END CONTAINER DIV ####### -->
 
+    <!-- ####### JAVASCRIPT ####### -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sidr/2.2.1/jquery.sidr.min.js"></script>
+    <script src="{{ url_for('static', filename='js/custom_js.js') }}"></script>
+    {% block javascript %}{% endblock %}
+    <!-- ####### END JAVASCRIPT ####### -->
   </body>
 </html>

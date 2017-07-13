@@ -44,8 +44,8 @@ def environmental_testing():
     return render_template('environmental_testing.html')
 
 @app.route('/services/playday/')
-def play_day():
-    return render_template('play_day.html')
+def play_days():
+    return render_template('play_days.html')
 
 @app.route('/services/test-dusts/')
 def test_dusts():
