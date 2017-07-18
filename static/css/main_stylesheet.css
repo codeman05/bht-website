@@ -48,7 +48,7 @@ NAVIGATION
 
 .logo {
   height: 4.688em;
-  width: 12.500em;
+  width: 9.500em; /* original 12.5 */
   padding: 0.75em;
   padding-bottom: 0.75em;
 }
@@ -121,6 +121,14 @@ COLORS
 
 
 
+@media(min-width:768px) {
+  .nav-icon {
+    margin-top: 3.000em;
+  }
+}
+
+
+
 /************************************   INDIVIDUAL PAGES   ************************************/ 
 
 
@@ -160,9 +168,9 @@ THE BLUE HEAVEN CREW
 }
 
 .crew-photo {
-  width: 13.500em;
+  /* width: 13.500em;
   height: 15.625em;
-  max-width: 80%;
+  max-width: 80%; */
   padding: .625em;
   border-radius: 10%;
 }
@@ -185,3 +193,6 @@ table td {
 table tr:nth-of-type(even) {
   background-color: #D5DAE3;
 }
+
+
+

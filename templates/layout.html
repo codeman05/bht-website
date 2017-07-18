@@ -9,7 +9,14 @@
     <title>{% block title %}{% endblock title %} | BHT</title>
 
     <!-- ####### FAVICON ####### -->
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='assets/apple-touch-icon.png?v=WGaA4kgkbx') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/favicon-32x32.png?v=WGaA4kgkbx') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='assets/favicon-16x16.png?v=WGaA4kgkbx') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='assets/manifest.json?v=WGaA4kgkbx') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='assets/safari-pinned-tab.svg?v=WGaA4kgkbx') }}" color="#0a2c6b">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/favicon.ico?v=WGaA4kgkbx') }}">
+    <meta name="msapplication-config" content="{{ url_for('static', filename='assets/browserconfig.xml?v=WGaA4kgkbx') }}">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- ####### STYLESHEETS ####### -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
