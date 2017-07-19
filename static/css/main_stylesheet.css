@@ -10,6 +10,7 @@ body {
 
 .inner-container {
   width: 95%;
+  max-width: 768px;
   margin: auto;
 }
 
@@ -44,19 +45,24 @@ NAVIGATION
 **************************/ 
 .navbar {
   height: 7.188em;
+  margin-bottom: 0;
 }
 
 .logo {
   height: 4.688em;
-  width: 9.500em; /* original 12.5 */
+  width: 9.500em;
   padding: 0.75em;
   padding-bottom: 0.75em;
 }
 
 nav {
-  /* Hide navigation so that icon(javascript) controls its display on mobile layout. */
+  /* Hide navigation so that icon(javascript) controls its display. */
   display: none;  
 }
+
+ .nav-icon {
+  margin-top: -0.75em;
+} 
 
 
 
@@ -121,14 +127,6 @@ COLORS
 
 
 
-@media(min-width:768px) {
-  .nav-icon {
-    margin-top: 3.000em;
-  }
-}
-
-
-
 /************************************   INDIVIDUAL PAGES   ************************************/ 
 
 
@@ -138,10 +136,11 @@ HOME
 **************************/
 
 .carousel-container {
-  /*margin-top: 1.25em;
-  margin-bottom: 1.25em;*/
-  max-width: 960px;
-  margin: 1.25em auto;
+  /* min-width: 525px;
+  max-width: 960px; */
+  min-width: 100%;
+  margin-top: 3.750em;
+  margin-bottom: 3.750em;
 }
 
 
@@ -168,9 +167,6 @@ THE BLUE HEAVEN CREW
 }
 
 .crew-photo {
-  /* width: 13.500em;
-  height: 15.625em;
-  max-width: 80%; */
   padding: .625em;
   border-radius: 10%;
 }
@@ -196,3 +192,11 @@ table tr:nth-of-type(even) {
 
 
 
+/************************************   MEDIA QUERIES 768px   ************************************/ 
+@media (min-width: 768px) {
+  .nav-icon {
+    margin-top: 3.000em;
+  } 
+}
+
+ 
